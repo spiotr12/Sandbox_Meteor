@@ -1,0 +1,18 @@
+<template name="peopleList">
+
+    <ul class="peoples-list">
+        {{#each peoples}}
+            {{>person}}
+        {{/each}}
+    </ul>
+
+</template>
+
+<template name="person">
+    <li>
+        <span>
+            {{firstname}} {{lastname}} {{#if age}}( Age: {{age}} ){{/if}}
+        </span>
+        <button class="delete">Remove</button>
+    </li>
+</template>
