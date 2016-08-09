@@ -13,6 +13,6 @@ Template.peopleList.helpers({
 Template.peopleList.events({
 	'click .delete'(){
 		let confirm = confirm("Do you want to remove " + this.firstname + " " + this.lastname);
-		// Peoples.remove(this._id);
+		Peoples.remove(this._id);
 	}
 });

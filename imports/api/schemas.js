@@ -20,5 +20,22 @@ Schemas.People = new SimpleSchema({
 		type: Number,
 		label: "Age",
 		optional: true
+	},
+	groupId: {
+		type: Meteor.Collection.ObjectID,
+		label: "ID",
+		optional: true
+	}
+});
+
+Schemas.Groups = new SimpleSchema({
+	_id: {
+		type: Meteor.Collection.ObjectID,
+		label: "ID",
+		optional: true
+	},
+	groupName: {
+		type: String,
+		label: "Group name"
 	}
 });

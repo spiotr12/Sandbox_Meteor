@@ -1,18 +1,20 @@
 <template name="peopleList">
 
-    <ul class="peoples-list">
+    <div class="container peoples-list">
         {{#each peoples}}
             {{>person}}
         {{/each}}
-    </ul>
+    </div>
 
 </template>
 
 <template name="person">
-    <li>
-        <span>
+    <div class="row">
+        <div class="col-md-5">
             {{firstname}} {{lastname}} {{#if age}}( Age: {{age}} ){{/if}}
-        </span>
-        <button class="delete">Remove</button>
-    </li>
+        </div>
+        <div class="col-md-2">
+            <button class="delete">Remove</button>
+        </div>
+    </div>
 </template>

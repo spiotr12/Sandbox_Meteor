@@ -6,28 +6,30 @@ import './new-person-form.html';
 Template.newPersonForm.events({
 	'submit .new-Person'(event) {
 
-		console.log("LOG: Adding new person");
+		console.log("CLIENT LOG: Adding new person");
 
 		event.preventDefault();
+
+		console.log(event);
 
 		// get values
 		const target = event.target;
 		const firstname = target.firstname.value;
 		const lastname = target.lastname.value;
-		const age = target.age.value;
+		const age = parseInt(target.age.value);
 
-		console.log(event);
+		const person = {
+			firstname: firstname,
+			lastname: lastname,
+			age: age
+		};
 
 		// insert person
-		Peoples.insert({
-			firstname,
-			lastname,
-			age
-		});
+		Meteor.call('peoples.insert', person);
 
 		// clear form
-		target.firstname.value = "";
-		target.lastname.value = "";
-		target.age.value = "";
+		// target.firstname.value = "";
+		// target.lastname.value = "";
+		// target.age.value = "";
 	}
 });
