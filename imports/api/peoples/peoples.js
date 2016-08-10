@@ -1,25 +1,34 @@
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+import { ValidationError } from 'meteor/mdg:validation-error';
 
+import { Log, Converter } from '../muf';
 import { Schemas } from '../schemas';
 
 export const Peoples = new Mongo.Collection('peoples', { idGeneration: 'MONGO' });
 
+if (Meteor.isServer) {
+	Meteor.publish('peoples', function peoplePublication() {
+		return Peoples.find();
+	})
+}
+
 Meteor.methods({
 	'peoples.insert'(person){
-		console.log("SERVER LOG: Adding new person");	// shows up on client and server ????
+		Log.forServer('Attempt to add person', 'info');
 
 		const context = Schemas.People.namedContext("peopleInsert");
-		let isValid = Schemas.People.validate(person);
 
-		console.log(isValid);
+		context.validate(person);
 
-		if (!isValid) {
-			console.log("Some values are invalid:");
-			console.log(context.invalidKeys());
-			// throw new Meteor.Error("invalid-fields", context.invalidKeys());
+		if (!context.isValid()) {
+			Log.forServer("Some fields are invalid:", 'warning');
+			Log.forServer(context.invalidKeys());
 		} else {
-			Peoples.insert(person);
+			Log.forServer(Converter.objectToString(person, {withType: true}));
+			Log.forClient(Converter.objectToString(person));
+			// Peoples.insert(person);
+			Log.out('Person added succesfully! :)');
 		}
 
 	}

@@ -17,11 +17,9 @@ standard-minifier-js@1.1.8    # JS minifier run for production mode
 es5-shim@4.6.13                # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.5.7              # Enable ECMAScript2015+ syntax in app code
 
-autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 
 less@2.7.4                    # Allow to use less css pre-processor
 
-aldeed:simple-schema    # Allow to add schemas
-aldeed:collection2
-mdg:validation-error    # Allow to receive validation error
 huttonr:bootstrap3
+mdg:validation-error
+aldeed:simple-schema

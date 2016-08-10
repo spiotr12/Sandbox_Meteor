@@ -6,11 +6,7 @@ import './new-person-form.html';
 Template.newPersonForm.events({
 	'submit .new-Person'(event) {
 
-		console.log("CLIENT LOG: Adding new person");
-
 		event.preventDefault();
-
-		console.log(event);
 
 		// get values
 		const target = event.target;
@@ -28,8 +24,8 @@ Template.newPersonForm.events({
 		Meteor.call('peoples.insert', person);
 
 		// clear form
-		// target.firstname.value = "";
-		// target.lastname.value = "";
-		// target.age.value = "";
+		target.firstname.value = "";
+		target.lastname.value = "";
+		target.age.value = "";
 	}
 });

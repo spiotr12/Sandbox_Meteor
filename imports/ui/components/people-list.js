@@ -4,6 +4,10 @@ import { Peoples } from '../../api/peoples/peoples'	// imports collection ?
 
 import './people-list.html';    // imports html
 
+Template.peopleList.onCreated(function peopleListOnCreated(){
+	Meteor.subscribe('peoples');
+})
+
 Template.peopleList.helpers({
 	peoples() {
 		return Peoples.find({}, { sort: { lastname: 1 } });
