@@ -1,6 +1,5 @@
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
-import { ValidationError } from 'meteor/mdg:validation-error';
 
 import { Log, Converter } from '../muf';
 import { Schemas } from '../schemas';
@@ -22,12 +21,12 @@ Meteor.methods({
 		context.validate(person);
 
 		if (!context.isValid()) {
-			Log.forServer("Some fields are invalid:", 'warning');
+			Log.forServer("Some fields are invalid:", 'warn');
 			Log.forServer(context.invalidKeys());
 		} else {
-			Log.forServer(Converter.objectToString(person, {withType: true}));
+			Log.forServer(Converter.objectToString(person, {withType: true, inLine: true}));
 			Log.forClient(Converter.objectToString(person));
-			// Peoples.insert(person);
+			Peoples.insert(person);
 			Log.out('Person added succesfully! :)');
 		}
 

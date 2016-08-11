@@ -2,6 +2,19 @@
   <library name="meteor-packages-auto-import-npm" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/themes/generic-logging.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/custom/zalgo.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/system/supports-colors.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/maps/random.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/custom/trap.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/maps/rainbow.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/maps/america.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/colors.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/maps/zebra.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/styles.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/extendStringPrototype.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/index.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/safe.js" />
         <item url="file://$USER_HOME$/.meteor/packages/babel-compiler/6.9.0/npm/node_modules/ms/index.js" />
         <item url="file://$USER_HOME$/.meteor/packages/babel-compiler/6.9.0/npm/node_modules/vlq/dist/vlq.js" />
         <item url="file://$USER_HOME$/.meteor/packages/babel-compiler/6.9.0/npm/node_modules/vlq/src/vlq.js" />
@@ -4381,6 +4394,19 @@
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/themes/generic-logging.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/custom/zalgo.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/system/supports-colors.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/maps/random.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/custom/trap.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/maps/rainbow.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/maps/america.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/colors.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/maps/zebra.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/styles.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/extendStringPrototype.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/lib/index.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nooitaf_colors/1.1.2_1/npm/node_modules/colors/safe.js" />
       <root url="file://$USER_HOME$/.meteor/packages/babel-compiler/6.9.0/npm/node_modules/ms/index.js" />
       <root url="file://$USER_HOME$/.meteor/packages/babel-compiler/6.9.0/npm/node_modules/vlq/dist/vlq.js" />
       <root url="file://$USER_HOME$/.meteor/packages/babel-compiler/6.9.0/npm/node_modules/vlq/src/vlq.js" />

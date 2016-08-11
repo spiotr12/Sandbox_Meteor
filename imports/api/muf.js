@@ -1,9 +1,17 @@
 /**
- * Created by Piotrek on 09/08/2016.
- *
- * MY USEFUL FUNCTIONS
- *
+ * =====================
+ *    MY USEFUL FUNCTIONS
+ * =====================
  * This is set of useful custom build functions for app development for Meteor
+ * _____________________
+ *    Author:
+ * ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ *    Piotr Starzec
+ * _____________________
+ *    Requirements:
+ * ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ *    meteor packages:
+ *    - nooitaf:colors
  */
 import { Meteor } from 'meteor/meteor';
 
@@ -31,14 +39,42 @@ export const Log = {
 	 * @param {string} level (optional)
 	 */
 	forServer: function (message, level = null) {
+		colors.setTheme({
+			good: 'green',
+			debug: 'blue',
+			warning: 'yellow',
+			err: 'red',
+		});
+
+		let str = '';
+
 		if (arguments.length == 1) {
 			if (Meteor.isServer) {
-				console.log(message);
+				str = message;
+				// console.log(message);
 			}
 		} else {
 			if (Meteor.isServer) {
-				console.log('[' + level.toUpperCase() + ']\t' + message);
+				str = '[' + level.toUpperCase() + ']\t' + message + ' ';
+				// console.log(('[' + level.toUpperCase() + ']\t' + message));
 			}
+		}
+		switch (level) {
+			case 'good' :
+				console.log(str.good);
+				break;
+			case 'debug' :
+				console.log(str.debug);
+				break;
+			case 'warn' :
+				console.log(str.warning);
+				break;
+			case 'error' :
+				console.log(str.err);
+				break;
+			default :
+				console.log(str);
+				break;
 		}
 	},
 
@@ -62,7 +98,8 @@ export const Converter = {
 	/**
 	 * Produce a string with all object properties
 	 * @param {object} obj Object with properties
-	 * @param {boolean} withType set to true for printing property type
+	 * @param {boolean} withType (optional) set to true for printing property type
+	 * @param {boolean} inLine (optional) set to true for printing properties in single line
 	 * @returns {string}
 	 */
 	objectToString: function (obj, { withType = false, inLine = false } = {}) {
